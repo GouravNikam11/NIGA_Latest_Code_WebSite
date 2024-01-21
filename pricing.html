@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +13,16 @@
     <link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
 
     <style>
+        .col5{
+            width: 20%;
+        }
+
+        @media screen and (min-device-width: 300px) and (max-device-width: 1024px) { 
+            .col5{
+                width: auto !important;
+            }
+        }
+
         .cart-table thead tr th, .cart-table tbody tr td  {
             border: 1px solid gainsboro !important;
         }
@@ -29,6 +39,111 @@
             color: #31a8cb !important;
             font-weight: 500 !important;
         }
+
+        main {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+
+        .card-trial,
+        .card-basic,
+        .card-premium,
+        .card-standard,
+        .card-gold {
+        padding: 0 0 0.5rem 0;
+        line-height: 2.5;
+        background: #fff;
+        color: #444;
+        text-align: center;
+        border-radius: 1rem;
+        box-shadow: 0.5rem 0.5rem 2rem rgba(51, 51, 51, 0.2);
+        overflow: hidden;
+        transition: all 0.1ms ease-in-out;
+        margin-bottom: 20px;
+        }
+        ..card-trial:hover,
+        .card-basic:hover,
+        .card-premium:hover,
+        .card-standard:hover,
+        .card-gold:hover {
+        transform: scale(1.02);
+        }
+
+        .card-header {
+        height: 6rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 1.3rem 0;
+        color: #fff;
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        }
+
+        .header-trial,
+        .btn-trial {
+        background: linear-gradient(135deg, #d58ff9, #ff007a);
+        }
+
+        .header-basic,
+        .btn-basic {
+        background: linear-gradient(135deg, #0077ee, #06c766);
+        }
+
+        .header-standard,
+        .btn-standard {
+        background: linear-gradient(135deg, #4c0896, #f42ca1);
+        }
+
+        .header-gold,
+        .btn-gold {
+        background: linear-gradient(135deg, #eea300, #ee5700);
+        }
+
+        .header-premium,
+        .btn-premium {
+        background: linear-gradient(135deg, #3788be, #6f28ad);
+        }
+
+        .card-body {
+        padding: 1.5rem 0;
+        }
+        .card-body h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        }
+
+        .card-element-container {
+        color: #444;
+        list-style: none;
+        }
+
+        .btn {
+        margin: 0.5rem 0;
+        padding: 1rem 1rem;
+        outline: none;
+        border-radius: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.1ms ease-in-out;
+        }
+
+        .btn:hover {
+        transform: scale(0.95);
+        }
+
+        .btn:active {
+        transform: scale(1);
+        }
+
+        .card-element-hidden {
+        display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -154,14 +269,15 @@
 
 <section class="service style-2 sec-padd">
     <div class="container"> 
-        <div class="row">
+        
+        <!-- <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
           
                 <br>
                 <div class="product-tab-box">
                     <ul class="nav nav-tabs tab-menu" style="left: auto;">
                         <li class="active" style="width: 50%;"><a href="#desc" data-toggle="tab" aria-expanded="false">Our Packages</a></li>
-                        <!-- <li class="" style="width: 50%;"><a href="#review" data-toggle="tab" aria-expanded="true">Our Top-ups</a></li> -->
+                        <li class="" style="width: 50%;"><a href="#review" data-toggle="tab" aria-expanded="true">Our Top-ups</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="desc">
@@ -246,27 +362,6 @@
                                                 </td>
                                             </tr>
 
-                                            <!-- <tr>
-                                                <td class="prod-column text-left">
-                                                    OFFERS IF ANY
-                                                </td>
-                                                <td>
-                                                    -
-                                                </td>
-                                                <td>
-                                                    -
-                                                </td>
-                                                <td>
-                                                    -
-                                                </td>
-                                                <td>
-                                                    -
-                                                </td>
-                                                <td>
-                                                    -
-                                                </td>
-                                            </tr> -->
-
                                             <tr>
                                                 <td class="prod-column text-left">
                                                     FREE MODULES
@@ -345,7 +440,7 @@
 
 
                         </div>
-                        <!-- <div class="tab-pane " id="review">
+                        <div class="tab-pane " id="review">
                        
 
                             <div class="cart-outer">
@@ -445,12 +540,121 @@
                             </div>
 
 
-                        </div> -->
+                        </div>
                     </div>      
                 </div>
 
 
             </div>
+        </div> -->
+
+        <div class="row">
+
+            <main>
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col5">
+                    <div class="card-trial">
+                        <div class="card-header header-trial">
+                        <h3>Trial</h3>
+                        </div>
+                        <div class="card-body">
+                        <p><h2>₹ 149 </h2></p>
+                        <div class="card-element-hidden-trial">
+                            <ul class="card-element-container">
+                                <li class="card-element">7 Days Validity</li>
+                                <li class="card-element">Unlimited No. of Cases *</li>
+                                <li class="card-element">1 Logins *</li>
+                                <li class="card-element">Include All Modules *</li>
+                            </ul>
+                            <button class="btn btn-trial">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-lg-2 col-md-12 col-sm-12 col5">
+                    <div class="card-basic">
+                        <div class="card-header header-basic">
+                        <h3>Basic</h3>
+                        </div>
+                        <div class="card-body">
+                        <p><h2>₹ 299 </h2></p>
+                        <div class="card-element-hidden-basic">
+                            <ul class="card-element-container">
+                                <li class="card-element">1 Month Validity</li>
+                                <li class="card-element">Unlimited No. of Cases *</li>
+                                <li class="card-element">1 Logins *</li>
+                                <li class="card-element">Include All Modules *</li>
+                            </ul>
+                            <button class="btn btn-basic">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col5">
+                    <div class="card-standard">
+                        <div class="card-header header-standard">
+                        <h3>Standard</h3>
+                        </div>
+                        <div class="card-body">
+                        <p><h2>₹ 499 </h2></p>
+                        <div class="card-element-hidden-standard">
+                            <ul class="card-element-container">
+                                <li class="card-element">3 Months Validity</li>
+                                <li class="card-element">Unlimited No. of Cases *</li>
+                                <li class="card-element">2 Logins *</li>
+                                <li class="card-element">Include All Modules *</li>
+                            </ul>
+                            <button class="btn btn-standard">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col5">
+                    <div class="card-gold">
+                        <div class="card-header header-gold">
+                        <h3>Gold</h3>
+                        </div>
+                        <div class="card-body">
+                        <p><h2>₹ 799 </h2></p>
+                        <div class="card-element-hidden-gold">
+                            <ul class="card-element-container">
+                                <li class="card-element">6 Months Validity</li>
+                                <li class="card-element">Unlimited No. of Cases *</li>
+                                <li class="card-element">3 Logins *</li>
+                                <li class="card-element">Include All Modules *</li>
+                            </ul>
+                            <button class="btn btn-gold">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 col-sm-12 col5">
+                    <div class="card-premium">
+                        <div class="card-header header-premium">
+                        <h3>Premium</h3>
+                        </div>
+                        <div class="card-body">
+                        <p><h2>₹ 999 </h2></p>
+                        <div class="card-element-hidden-premium">
+                            <ul class="card-element-container">
+                                <li class="card-element">12 Months Validity</li>
+                                <li class="card-element">Unlimited No. of Cases *</li>
+                                <li class="card-element">4 Logins *</li>
+                                <li class="card-element">Include All Modules *</li>
+                            </ul>
+                            <button class="btn btn-premium">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </main>
         </div>
     </div>
 </section>
